@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "raqKD9p4ufNzwmrxNRx16NYXCE0+2ag6alGlVLaBw7OJKUciuFuX0WDheZobAzThSCbQOQ3Gt8H/UaDQhO25dw==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\ProjetoLocaliza-Grupo-06\\LocalizaLabzAcademy.Grupo6.WebApi\\LocalizaLabzAcademy.Grupo6.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\judos\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\judos\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\judos\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\judos\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\judos\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\judos\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
