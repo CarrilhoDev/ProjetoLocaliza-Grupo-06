@@ -1,6 +1,6 @@
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Enums 
 {
-    public enum VehicleCategory
+    public enum CategoriaVeiculo
     {
         Basico = 1,
         Completo = 2,

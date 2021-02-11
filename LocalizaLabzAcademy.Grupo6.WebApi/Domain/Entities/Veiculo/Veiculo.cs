@@ -2,15 +2,17 @@ using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Enums;
 
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle
 {
-    public class Vehicle 
+    public class Veiculo 
     {
         public int Id { get; set; }
-        public string Plate { get; set; }
-        public Double PricePerHour { get; set; }
-        public int FuelTankCapacity { get; set; }
-        public int TrunkCapacity { get; set; }
-        public VehicleBrand Brand {get; set;}
-        public VehicleModel Model {get;set;}
-        public VehicleFuel Fuel {get; set;}
+        public string Placa { get; set; }
+        public Double ValorHora { get; set; }
+        public int CapacidadeTanqueCombustivel { get; set; }
+        public int CapacidadePortaMalas { get; set; }
+        public MarcaVeiculo Marca {get; set;}
+        public ModeloVeiculo Modelo {get;set;}
+        public int Ano { get; set; }
+        public CategoriaVeiculo Categoria { get; set; }
+        public VehicleFuel Combustivel {get; set;}
     }
 }
