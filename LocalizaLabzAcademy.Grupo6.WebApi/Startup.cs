@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LocalizaLabzAcademy.Grupo6.WebApi.Infra.Database;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +34,9 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocalizaLabzAcademy.Grupo6.WebApi", Version = "v1" });
             });
+
+            services.AddDbContext<EntityContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("EntityContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
