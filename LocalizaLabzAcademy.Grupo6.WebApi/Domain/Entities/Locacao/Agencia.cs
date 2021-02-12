@@ -1,6 +1,6 @@
-namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle
+namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Locacao
 {
-    public class Agenciao
+    public class Agencia
     {
         public int Id { get; set; }
         public string Nome { get; set; }

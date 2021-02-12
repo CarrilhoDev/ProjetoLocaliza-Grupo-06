@@ -1,3 +1,4 @@
+using System;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Enums;
 
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle
