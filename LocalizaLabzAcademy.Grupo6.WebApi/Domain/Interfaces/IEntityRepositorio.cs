@@ -12,5 +12,6 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces
         Task<bool> Delete(int id);
         Task<List<T>> GetAll();
         Task<T> GetById(int id);
+        Task<T> CreateAndReturn(T entity);
     }
 }

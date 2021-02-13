@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Locacao;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -12,18 +13,22 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Controllers
     [Route("api/Locacao")]
     public class LocacaoController : ControllerBase
     {
-        public LocacaoController()
+        private readonly ILocacaoServicos locacaoService;
+        public LocacaoController(ILocacaoServicos locacaoService)
         {
+            this.locacaoService = locacaoService;
         }
 
-        [HttpGet]
+        [HttpGet, Route("reservasCliente/{cpf}")]
         public IEnumerable<Aluguel> BuscarReservasPorCliente(string cpf)
         {
+            return locacaoService.BuscarResrvasPorCpfCliente(cpf);
         }
 
         [HttpPost]
-        public IEnumerable<Aluguel> CriarReserva()
+        public async Task<Aluguel> CriarReserva(Aluguel aluguel)
         {
+            return await locacaoService.CriarReserva(aluguel);
         }
 
     }

@@ -21,6 +21,13 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Infra.Database
             return result != 0 ? true : false;
         }
 
+        public async Task<T> CreateAndReturn(T entity)
+        {
+            var result = _context.Set<T>().Add(entity);
+            await _context.SaveChangesAsync();
+            return result.Entity;
+        }
+
         public async Task<bool> Delete(int id)
         {
             var entity = await GetById(id);
