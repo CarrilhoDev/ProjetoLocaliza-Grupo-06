@@ -90,3 +90,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/vscode,windows,macos,linux,dotnetcore
+LocalizaLabzAcademy.Grupo6.WebApi/obj/project.assets.json
+LocalizaLabzAcademy.Grupo6.WebApi/obj/project.assets.json
+LocalizaLabzAcademy.Grupo6.WebApi/obj/project.nuget.cache
+LocalizaLabzAcademy.Grupo6.WebApi/obj/LocalizaLabzAcademy.Grupo6.WebApi.csproj.nuget.g.props
+LocalizaLabzAcademy.Grupo6.WebApi/obj/LocalizaLabzAcademy.Grupo6.WebApi.csproj.nuget.dgspec.json

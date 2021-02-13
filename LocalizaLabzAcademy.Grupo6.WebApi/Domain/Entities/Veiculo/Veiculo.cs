@@ -14,5 +14,6 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle
         public int Ano { get; set; }
         public CategoriaVeiculo Categoria { get; set; }
         public VehicleFuel Combustivel {get; set;}
+        public string UrlVeiculo {get; set;}
     }
 }
