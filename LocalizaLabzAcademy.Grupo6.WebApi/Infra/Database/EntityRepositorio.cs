@@ -1,7 +1,55 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Infra.Database
 {
-    public class EntityRepositorio
+    public class EntityRepositorio<T> : IEntityRepositorio<T> where T : Entity
     {
-        
+       protected readonly EntityContext _context;
+
+       public EntityRepositorio(EntityContext context){
+           _context = context;
+       }
+
+        public async Task<bool> Create(T entity)
+        {            
+            _context.Set<T>().Add(entity);
+            var result = await _context.SaveChangesAsync();
+            return result != 0 ? true : false;
+        }
+
+        public async Task<bool> Delete(int id)
+        {
+            var entity = await GetById(id);
+            _context.Set<T>().Remove(entity);
+            var result = await _context.SaveChangesAsync();
+
+            return result != 0 ? true : false;            
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
+        }
+
+        public async Task<List<T>> GetAll()
+        {
+            return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T> GetById(int id)
+        {
+            return await _context.Set<T>().FirstOrDefaultAsync(e => e.Id == id);
+        }
+
+        public async Task<bool> Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            var result = await _context.SaveChangesAsync();
+            return result != 0 ? true : false;
+        }
     }
 }

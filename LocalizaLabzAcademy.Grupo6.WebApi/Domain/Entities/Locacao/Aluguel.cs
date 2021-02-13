@@ -1,13 +1,12 @@
 using System;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.User;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle;
-using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
+
 
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Locacao
 {
-    public class Aluguel : IEntity
+    public class Aluguel : Entity
     {
-        public int Id { get; set; }
         public Veiculo Veiculo { get; set; }
         public int TotalHorasLocacao { get; set; }
         public int ValorTotal { get; set; }

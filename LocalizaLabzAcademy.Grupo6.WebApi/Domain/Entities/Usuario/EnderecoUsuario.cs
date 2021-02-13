@@ -1,10 +1,7 @@
-using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
-
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.User
 {
-    public class EnderecoUsuario : IEntity
+    public class EnderecoUsuario : Entity
     {
-        public int Id { get; set; }
         public string CEP { get; set; }
         public string Logradouro { get; set; }
         public string Numero { get; set; }
