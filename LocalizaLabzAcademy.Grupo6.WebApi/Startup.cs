@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Servicos;
 using LocalizaLabzAcademy.Grupo6.WebApi.Infra.Database;
+using LocalizaLabzAcademy.Grupo6.WebApi.Infra.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +32,9 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IUsuarioServicos, UsuarioServicos>();
+            services.AddScoped<IEnderecoRepositorio, EnderecoRepositorio>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -36,7 +42,7 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi
             });
 
             services.AddDbContext<EntityContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("EntityContext")));
+            options.UseSqlServer(Configuration.GetConnectionString("DefautConection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
