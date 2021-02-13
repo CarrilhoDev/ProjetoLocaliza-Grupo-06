@@ -1,8 +1,9 @@
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Enums;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
 
 namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.User
 {
-    public class RegistroUsuario
+    public class RegistroUsuario : IEntity
     {
         public int Id { get; set; }
         public string Documento { get; set; }
