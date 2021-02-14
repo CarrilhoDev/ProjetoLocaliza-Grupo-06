@@ -20,15 +20,15 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Controllers
         }
 
         [HttpGet, Route("reservasCliente/{cpf}")]
-        public IEnumerable<Aluguel> BuscarReservasPorCliente(string cpf)
+        public IActionResult BuscarReservasPorCliente(string cpf)
         {
-            return locacaoService.BuscarResrvasPorCpfCliente(cpf);
+            return Ok(locacaoService.BuscarResrvasPorCpfCliente(cpf));
         }
 
         [HttpPost]
-        public async Task<Aluguel> CriarReserva(Aluguel aluguel)
+        public async Task<IActionResult> CriarReserva(Aluguel aluguel)
         {
-            return await locacaoService.CriarReserva(aluguel);
+            return Ok(await locacaoService.CriarReserva(aluguel));
         }
 
     }
