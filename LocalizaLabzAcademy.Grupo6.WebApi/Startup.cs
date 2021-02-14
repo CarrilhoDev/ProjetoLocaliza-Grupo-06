@@ -39,6 +39,7 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi
             services.AddScoped<ILocacaoRepositorio, LocacaoRepositorio>();
             services.AddScoped<IAgenciaRepositorio, AgenciaRepositorio>();
             services.AddScoped<IChecklistRepositorio, ChecklistRepositorio>();
+            services.AddScoped<IVeiculoAgenciaRepositorio, VeiculoAgenciaRepositorio>();
             
             
             services.AddControllers();

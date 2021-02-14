@@ -9,11 +9,11 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ChecklistController : ControllerBase
+    public class VeiculoAgenciaController : ControllerBase
     {
-        private readonly IChecklistRepositorio _rep;
+        private readonly IVeiculoAgenciaRepositorio _rep;
 
-        public ChecklistController(IChecklistRepositorio rep)
+        public VeiculoAgenciaController(IVeiculoAgenciaRepositorio rep)
         {
             _rep = rep;
         }
@@ -31,16 +31,16 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CheckList checklist)
+        public async Task<IActionResult> Create(VeiculoAgencia agencia)
         {
-            var retorno = await _rep.Create(checklist);
+            var retorno = await _rep.Create(agencia);
             return Ok(retorno);
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(CheckList checklist)
+        public async Task<IActionResult> Update(VeiculoAgencia agencia)
         {
-            return Ok(await _rep.Update(checklist));
+            return Ok(await _rep.Update(agencia));
         }
 
         [HttpDelete("{id}")]
