@@ -11,9 +11,9 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Controllers
     [Route("api/[controller]")]
     public class AgenciaController : ControllerBase
     {
-        private readonly IEntityRepositorio<Agencia> _rep;
+        private readonly IAgenciaRepositorio _rep;
 
-        public AgenciaController(IEntityRepositorio<Agencia> rep)
+        public AgenciaController(IAgenciaRepositorio rep)
         {
             _rep = rep;
         }
