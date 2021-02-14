@@ -43,7 +43,7 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi
             services.AddScoped<IEnderecoUsuarioRepositorio, EnderecoUsuarioRepositorio>();
             services.AddScoped<IRegistroUsuarioRepositorio, RegistroUsuarioRepositorio>();
             services.AddScoped<IMarcaVeiculoRepositorio, MarcaVeiculoRepositorio>();
-            
+            services.AddScoped<IModeloVeiculoRepositorio, ModeloVeiculoRepositorio>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
