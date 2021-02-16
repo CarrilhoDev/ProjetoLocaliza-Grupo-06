@@ -10,5 +10,7 @@ namespace LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Locacao
         public bool Amassado { get; set; }
         
         public bool Arranhoes { get; set; }
+        public Aluguel Locacao {get; set;}
+        public int LocacaoId {get; set;}
     }
 }
