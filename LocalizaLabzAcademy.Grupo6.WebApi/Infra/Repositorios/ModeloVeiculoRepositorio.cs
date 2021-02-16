@@ -1,5 +1,6 @@
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Locacao;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.User;
+using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Entities.Vehicle;
 using LocalizaLabzAcademy.Grupo6.WebApi.Domain.Interfaces;
 using LocalizaLabzAcademy.Grupo6.WebApi.Infra.Database;
 
